@@ -1,6 +1,9 @@
 node_modules
 
-newKey.json
+output
+
 test.js
+
+config.json
 
 package-lock.json
