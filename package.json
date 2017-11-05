@@ -1,7 +1,7 @@
 {
   "name": "eth-dev",
   "version": "0.0.1",
-  "description": "My own tools to for Ethereum development use",
+  "description": "My tools for Ethereum development use",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/zzy96/EthereumDev#readme",
   "dependencies": {
+    "ethereumjs-tx": "^1.3.3",
     "ethereumjs-util": "^5.1.2",
-    "keythereum": "^1.0.2"
+    "keythereum": "^1.0.2",
+    "web3": "^1.0.0-beta.24"
   }
 }

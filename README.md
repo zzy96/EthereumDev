@@ -1,2 +1,2 @@
 # EthereumDev
-My own tools to for Ethereum development use
+My tools for Ethereum development use
