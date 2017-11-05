@@ -1,0 +1,23 @@
+{
+  "name": "eth-dev",
+  "version": "0.0.1",
+  "description": "My own tools to for Ethereum development use",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzy96/EthereumDev.git"
+  },
+  "keywords": [
+    "Ethereum",
+    "Development"
+  ],
+  "author": "Zhou Zhiyao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zzy96/EthereumDev/issues"
+  },
+  "homepage": "https://github.com/zzy96/EthereumDev#readme"
+}
