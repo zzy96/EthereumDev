@@ -1,5 +1,4 @@
 var Web3 = require('web3');
-var Transaction = require('ethereumjs-tx');
 var fs = require('fs');
 var config = JSON.parse(fs.readFileSync('config.json'));
 
