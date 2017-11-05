@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/zzy96/EthereumDev/issues"
   },
-  "homepage": "https://github.com/zzy96/EthereumDev#readme"
+  "homepage": "https://github.com/zzy96/EthereumDev#readme",
+  "dependencies": {
+    "ethereumjs-util": "^5.1.2",
+    "keythereum": "^1.0.2"
+  }
 }
