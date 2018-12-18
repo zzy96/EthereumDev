@@ -20,7 +20,8 @@
   "homepage": "https://github.com/zzy96/EthereumDev#readme",
   "dependencies": {
     "ethereumjs-util": "^5.1.2",
+    "js-sha3": "^0.8.0",
     "keythereum": "^1.0.2",
-    "web3": "^1.0.0-beta.24"
+    "web3": "^1.0.0-beta.37"
   }
 }
