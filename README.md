@@ -1,8 +1,20 @@
 # EthereumDev
-My tools for Ethereum development use
 
-1. generate key
-2. send ether
-3. deploy contract
-4. recover private key
-5. send (private) transaction
+My JS scripts for Ethereum development use
+
+### Key Management
+
+* km_generateAccount.js
+* km_recoverPrivateKey.js
+* km_getPublicKey.js
+
+### Transact through Web3 Account
+
+* web3_deploy.js
+* web3_send.js
+* web3_call.js
+
+### External Signing
+
+* ext_sendRawPublicTx.js
+* ext_sendRawPrivateTx.js

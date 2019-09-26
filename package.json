@@ -1,27 +1,9 @@
 {
   "name": "eth-dev",
-  "version": "0.0.1",
-  "description": "My tools for Ethereum development use",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zzy96/EthereumDev.git"
-  },
-  "keywords": [
-    "Ethereum",
-    "Development"
-  ],
   "author": "Zhou Zhiyao",
-  "bugs": {
-    "url": "https://github.com/zzy96/EthereumDev/issues"
-  },
-  "homepage": "https://github.com/zzy96/EthereumDev#readme",
   "dependencies": {
-    "ethereumjs-util": "^5.1.2",
-    "js-sha3": "^0.8.0",
-    "keythereum": "^1.0.2",
-    "web3": "^1.0.0-beta.37"
+    "ethereumjs-util": "^6.1.0",
+    "keythereum": "^1.0.4",
+    "web3": "^2.0.0-alpha.1"
   }
 }
