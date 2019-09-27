@@ -9,7 +9,7 @@ keythereum.create(params, function (dk) {
   // The first 20 bytes of Keccak 256 hashes of public keys are referred to as account addresses.
   var address = ethereumUtil.bufferToHex(ethereumUtil.privateToAddress(dk.privateKey))
   fs.writeFileSync('../output/new-key-' + Date.now() + '.json', JSON.stringify({
-  	'address': address,
-	  'privateKey': ethereumUtil.bufferToHex(dk.privateKey)
-	}))
+    'address': address,
+    'privateKey': ethereumUtil.bufferToHex(dk.privateKey)
+  }))
 })

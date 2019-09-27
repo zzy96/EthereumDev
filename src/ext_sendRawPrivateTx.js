@@ -1,6 +1,6 @@
 var Web3 = require('web3')
 var RLP = require("rlp")
-const EthereumTx = require("ethereumjs-tx")
+var EthereumTx = require('ethereumjs-tx').Transaction
 var request = require("request")
 
 //configuration
@@ -16,19 +16,19 @@ var contractAbi = [{"constant":false,"inputs":[{"name":"_x","type":"uint256"}],"
 var myContract = new web3.eth.Contract(contractAbi)
 
 var myContractDeploy = myContract.deploy({
-	data: contractBin,
-	arguments: [19970419]
+  data: contractBin,
+  arguments: [19970419]
 })
 
 var rawTx = myContractDeploy.encodeABI()
-console.log("tx data: " + rawTx)
+// console.log("tx data: " + rawTx)
 
 request.post({url:'http://localhost:9081/storeraw', body:{ payload: Buffer.from(rawTx.slice(2), "hex").toString("base64") }, json:true}, function(error, httpResponse, body) {
   if (error) {
     console.log(error)
   } else {
-    console.log("tmHash: " + body.key)
-    console.log("tmHash(hex): " + "0x" + Buffer.from(body.key, "base64").toString("hex"))
+    // console.log("tmHash: " + body.key)
+    // console.log("tmHash(hex): " + "0x" + Buffer.from(body.key, "base64").toString("hex"))
     web3.eth.getTransactionCount(ethAccount.address).then( nonce => {
       var rawTx = {
         gasPrice: 0,
@@ -36,7 +36,7 @@ request.post({url:'http://localhost:9081/storeraw', body:{ payload: Buffer.from(
         data: "0x" + Buffer.from(body.key, "base64").toString("hex"),
         nonce: nonce
       }
-      var tx = new EthereumTx(rawTx)
+      var tx = new EthereumTx(rawTx, { hardfork: 'homestead' })
       tx.sign(Buffer.from(ethAccount.privateKey.slice(2), "hex"))
       var serializedTx = tx.serialize()
       // console.log("serializedTx: ", serializedTx)

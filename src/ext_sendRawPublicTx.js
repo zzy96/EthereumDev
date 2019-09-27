@@ -13,10 +13,10 @@ var myContract = new web3.eth.Contract(contractAbi)
 
 // var rawTx = myContract.methods.set(19960205).encodeABI()
 var rawTx = myContract.deploy({
-	data: contractBin,
-	arguments: [19970419]
+  data: contractBin,
+  arguments: [19970419]
 }).encodeABI()
-console.log("tx data: " + rawTx)
+// console.log("tx data: " + rawTx)
 
 // sign by node...
 // web3.eth.getTransactionCount("0xed9d02e382b34818e88b88a309c7fe71e65f419d").then( nonce => {

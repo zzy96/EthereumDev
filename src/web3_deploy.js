@@ -20,20 +20,20 @@ var myContractDeploy = myContract.deploy({
 
 myContractDeploy.estimateGas({gas: 4000000}, (error, gas) => {
 	if (error) {
-    console.log(error)
-  } else {
-  	console.log("gas: " + gas)
+		console.log(error)
+	} else {
+		console.log("gas: " + gas)
 	}
 })
 
 myContractDeploy.send({
-  from: ethAccount.address,
-  gas: 4000000,
-  gasPrice: 0
+	from: ethAccount.address,
+	gas: 4000000,
+	gasPrice: 0
 }, function(error, transactionHash){
-  if (error) {
-    console.log(error)
-  } else {
-    console.log("transactionHash: " + transactionHash)
-  }
+	if (error) {
+		console.log(error)
+	} else {
+		console.log("transactionHash: " + transactionHash)
+	}
 }).on('receipt', (receipt) => { console.log("receipt: " + receipt) })

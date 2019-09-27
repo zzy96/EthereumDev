@@ -2,6 +2,7 @@
   "name": "eth-dev",
   "author": "Zhou Zhiyao",
   "dependencies": {
+    "ethereumjs-tx": "^2.1.1",
     "ethereumjs-util": "^6.1.0",
     "keythereum": "^1.0.4",
     "request": "^2.88.0",

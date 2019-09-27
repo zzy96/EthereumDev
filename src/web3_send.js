@@ -17,11 +17,11 @@ var myContract = new web3.eth.Contract(contractAbi, "0x3138b5d45638dc5cf94844fcd
 var myContractSet = myContract.methods.set(19960205)
 
 myContractSet.estimateGas({gas: 4000000}, (error, gas) => {
-	if (error) {
+  if (error) {
     console.log(error)
   } else {
-  	console.log("gas: " + gas)
-	}
+    console.log("gas: " + gas)
+  }
 })
 
 myContractSet.send({
